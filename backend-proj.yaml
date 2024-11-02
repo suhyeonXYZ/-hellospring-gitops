@@ -1,0 +1,47 @@
+metadata:
+  creationTimestamp: "2024-10-31T12:36:14Z"
+  generation: 5
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:clusterResourceBlacklist: {}
+        f:clusterResourceWhitelist: {}
+        f:description: {}
+        f:namespaceResourceWhitelist: {}
+      f:status: {}
+    manager: argocd-server
+    operation: Update
+    time: "2024-10-31T12:48:54Z"
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:destinations: {}
+        f:sourceRepos: {}
+    manager: kubectl-edit
+    operation: Update
+    time: "2024-11-01T09:06:55Z"
+  name: backend
+  namespace: argocd
+  resourceVersion: "102402"
+  uid: 10caedae-5598-4746-89bd-03b2964c244b
+spec:
+  clusterResourceBlacklist:
+  - group: '*'
+    kind: '*'
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  description: hellospring
+  destinations:
+  - namespace: backend
+    server: https://kubernetes.default.svc
+  namespaceResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  sourceRepos:
+  - https://github.com/suhyeonXYZ/hellospring-helm
+status: {}
